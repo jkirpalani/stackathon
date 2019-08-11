@@ -20,13 +20,6 @@ export default function HomeScreen() {
       <ScrollView style={styles.container}>
         <Post />
         <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
       </ScrollView>
     </View>
   );

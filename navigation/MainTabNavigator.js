@@ -7,6 +7,8 @@ import {
 
 import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../screens/HomeScreen";
+import MapScreen from "../screens/MapScreen";
+
 // import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from "../screens/SettingsScreen";
 
@@ -20,7 +22,7 @@ HomeStack.navigationOptions = {
     <TabBarIcon
       focused={focused}
       name={
-        Platform.OS === "ios"
+        Platform.OS === "android"
           ? `ios-information-circle${focused ? "" : "-outline"}`
           : "md-information-circle"
       }
@@ -42,8 +44,27 @@ SettingsStack.navigationOptions = {
   )
 };
 
+const MapStack = createStackNavigator({
+  Map: MapScreen
+});
+
+MapStack.navigationOptions = {
+  tabBarLabel: "Map",
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === "android"
+          ? `ios-information-circle${focused ? "" : "-outline"}`
+          : "md-information-circle"
+      }
+    />
+  )
+};
+
 export default createBottomTabNavigator({
   HomeStack,
   // LinksStack,
-  SettingsStack
+  SettingsStack,
+  MapStack
 });
