@@ -1,26 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-// import { FirebaseWrapper } from "./firebase/firebase";
-// import { firebaseConfig } from "./firebase/config";
-// import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import MapView from "react-native-maps";
-// import SettingsScreen from "./components/SettingsScreen";
-// import HomeScreen from "./components/HomeScreen";
 import * as Permissions from "expo-permissions";
 // import Polyline from "@mapbox/polyline";
 
 // const locations = require("./locations.json");
 
-// const TabNavigator = createBottomTabNavigator({
-//   Home: HomeScreen,
-//   Settings: SettingsScreen
-// });
-
-// FirebaseWrapper.GetInstance().Initialize(firebaseConfig);
-
-// export default createAppContainer(TabNavigator);
-
-export default class Map extends React.Component {
+export default class MapScreen extends React.Component {
   constructor() {
     super();
     this.state = {
