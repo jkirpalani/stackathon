@@ -12,13 +12,14 @@ import {
 
 import { Post } from "../components/Post";
 import { Header } from "../components/Header";
+import LandingPage from "../components/LandingPage";
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Header text="Home" />
       <ScrollView style={styles.container}>
-        <Post />
+        {/* <LandingPage /> */}
         <Post />
       </ScrollView>
     </View>
