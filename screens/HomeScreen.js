@@ -19,7 +19,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <Header text="Home" />
       <ScrollView style={styles.container}>
-        {/* <LandingPage /> */}
+        <LandingPage />
         <Post />
       </ScrollView>
     </View>
