@@ -7,6 +7,7 @@ import { Asset } from "expo-asset";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 import AppNavigator from "./navigation/AppNavigator";
+// import LandingPage from "./components/LandingPage";
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
@@ -22,8 +23,9 @@ export default function App(props) {
   } else {
     return (
       <View style={styles.container}>
-        <View style={{ backgroundColor: "black", height: 20 }} />
-        {Platform.OS === "android" && <StatusBar barStyle="light-content" />}
+        <View style={{ backgroundColor: "white" }} />
+        {Platform.OS === "android" && <StatusBar barStyle="dark-content" />}
+        {/* <LandingPage />  */}
         <AppNavigator />
       </View>
     );
