@@ -6,29 +6,25 @@ import {
 } from "react-navigation";
 
 import TabBarIcon from "../components/TabBarIcon";
-import HomeScreen from "../screens/HomeScreen";
+// import HomeScreen from "../screens/HomeScreen";
 import MapScreen from "../screens/MapScreen";
 
 // import LinksScreen from '../screens/LinksScreen';
 import SearchScreen from "../screens/SearchScreen";
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen
-});
+// const HomeStack = createStackNavigator({
+//   Home: HomeScreen
+// });
 
-HomeStack.navigationOptions = {
-  tabBarLabel: "Home",
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === "android"
-          ? `ios-information-circle${focused ? "" : "-outline"}`
-          : "md-information-circle"
-      }
-    />
-  )
-};
+// HomeStack.navigationOptions = {
+//   tabBarLabel: "Home",
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon
+//       focused={focused}
+//       name={Platform.OS === "android" ? "ios-home" : "md-home"}
+//     />
+//   )
+// };
 
 const SearchStack = createStackNavigator({
   Search: SearchScreen
@@ -39,7 +35,7 @@ SearchStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === "android" ? "ios-options" : "md-options"}
+      name={Platform.OS === "android" ? "ios-search" : "md-search"}
     />
   )
 };
@@ -53,17 +49,12 @@ MapStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === "android"
-          ? `ios-information-circle${focused ? "" : "-outline"}`
-          : "md-information-circle"
-      }
+      name={Platform.OS === "android" ? "ios-pin" : "md-pin"}
     />
   )
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
   SearchStack,
   MapStack
 });
