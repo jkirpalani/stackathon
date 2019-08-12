@@ -6,25 +6,8 @@ import {
 } from "react-navigation";
 
 import TabBarIcon from "../components/TabBarIcon";
-// import HomeScreen from "../screens/HomeScreen";
 import MapScreen from "../screens/MapScreen";
-
-// import LinksScreen from '../screens/LinksScreen';
 import SearchScreen from "../screens/SearchScreen";
-
-// const HomeStack = createStackNavigator({
-//   Home: HomeScreen
-// });
-
-// HomeStack.navigationOptions = {
-//   tabBarLabel: "Home",
-//   tabBarIcon: ({ focused }) => (
-//     <TabBarIcon
-//       focused={focused}
-//       name={Platform.OS === "android" ? "ios-home" : "md-home"}
-//     />
-//   )
-// };
 
 const SearchStack = createStackNavigator({
   Search: SearchScreen

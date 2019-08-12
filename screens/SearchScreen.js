@@ -29,6 +29,9 @@ export default class SearchScreen extends React.Component {
         source={require("./../assets/images/bg-image.jpg")}
         style={styles.backgroundContainer}
       >
+        <Text h1 style={styles.h1Text}>
+          Plan Your Itinerary
+        </Text>
         <View style={styles.pickerContainer}>
           <Text style={styles.pickerText}>Select an Activity</Text>
           <Picker
@@ -106,7 +109,7 @@ export default class SearchScreen extends React.Component {
             underlineColorAndroid="transparent"
           />
           <Button
-            onPress={Alert.alert("Button Pressed!")}
+            onPress={() => Alert.alert("You pressed a button!")}
             title="Submit"
             color="rgba(0, 206, 209, 0.7)"
             height="100"
@@ -147,6 +150,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "rgba(255, 255, 255, 0.75)",
     color: "rgba(255, 255, 255, 0.7)"
+  },
+  h1Text: {
+    fontSize: 30,
+    fontWeight: "bold",
+    color: "rgba(0, 206, 209, 0.7)"
   },
   backgroundContainer: {
     flex: 1,
